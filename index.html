@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <!-- google fonts for funsies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>CIW Cert Study Guide</title>
+  </head>
+  <body>
+    <h1>Notes for CIW</h1>
+    <h4>Intro to web development</h4>
+    <ol>
+      <li>Internet vs Intranet</li>
+      <ul>
+        <li>
+          Internet: The Internet is a global network that uses TCP / IP
+          protocols to connect millions of computers worldwide. It can include
+          different networks, such as private, public, organizational, academic,
+          government, etc. It allows users to communicate with each other and
+          share massive amounts of data in various formats.
+        </li>
+
+        <li>
+          Intranet:The internet is a network created by connecting a large
+          number of computers or computer networks. It is a type of network that
+          cannot be owned by an entity. It is formed using networks of networks
+          configured using complex standards and rules (such as protocols).
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <li>Mobile websites vs mobile apps</li>
+      <ul>
+        <li><h4>Mobile Websites</h4></li>
+        <ul>
+          <li>Easy access</li>
+          <li>Developed the same regardless of device</li>
+          <li>Less performant than native apps</li>
+          <li>Find on search engine</li>
+          <li>Development and hosting costs</li>
+          <li>Weak offline capabilities</li>
+        </ul>
+
+        <li><h4>Mobile Apps</h4></li>
+        <ul>
+          <li>Apps come from the appstore</li>
+          <li>Each platform has a different language</li>
+          <li>More performant</li>
+          <li>Access to physical phone modules (RFID, GPS, etc)</li>
+          <li>Development, app store and server hosting costs</li>
+        </ul>
+      </ul>
+      <hr />
+      <li>Web dev trifecta</li>
+      <ul>
+        <li>HTML5: structure and markup</li>
+        <li>CSS3: style and formatting</li>
+        <li>Javascript: dynamic interaction</li>
+      </ul>
+      <hr />
+      <li>History of HTML</li>
+      <ul>
+        <li><h4>HTML3</h4></li>
+        <ul>
+          <li>Introduction of CSS (big stepping stone!)</li>
+        </ul>
+        <li><h4>HTML5</h4></li>
+        <ul>
+          <li>The video element</li>
+          <ul>
+            <video controls>
+              <source src="./assets/chickens4.mp4" type="video/mp4" />
+              Sorry your browser does not support embedded videos
+            </video>
+            <li>Attributes</li>
+            <ul>
+              <li>source tag: the video source to be played</li>
+              <ul>
+                <li>src: location of source</li>
+                <li>type: video encoding (video/mp4)</li>
+              </ul>
+              <li>autoplay: a boolean</li>
+              <li>
+                autopictureinpicture: If true allows for the hulu thing where
+                you can watch outside of window
+              </li>
+              <li>
+                controls: if present allows the browser to provide controls to
+                the video (volume, pause/resume playback)
+              </li>
+              <li>
+                controlsList: specify controlls, allowed are nodounload
+                nofullscreen noremoteplayback
+              </li>
+              <li>cross origin: whether or not to use CORS to fetch video</li>
+              <ul>
+                <li>
+                  anonymous: sends cross origin request without a credential;
+                  usage restricted
+                </li>
+                <li>
+                  useCredentials: sends cross origin request with a credential;
+                  usage restricted
+                </li>
+              </ul>
+              <li>height and width</li>
+              <li>loop: boolean</li>
+              <li>
+                poster: a url for an image to be viewed while video is
+                downloading
+              </li>
+            </ul>
+          </ul>
+          <li>The audio element</li>
+          <ul>
+            <audio controls src="./assets/chickens3.mp3"></audio>
+            <li>Attributes</li>
+            <ul>
+              <li>All the same as video</li>
+            </ul>
+            <li>Drag and Drop API</li>
+            <ul>
+              <li>
+                First you need to make the element draggable by setting the
+                draggable attribute to be true
+              </li>
+              <li>
+                The dataTransfer.setData() method gets the type and value of the
+                data set to be draggable
+              </li>
+              <li>
+                The ondragover event specifies where dragged data can be dropped
+                and accepts a function
+              </li>
+            </ul>
+            <li>Image captioning, download progress indicator</li>
+            <li>Offline browser storage</li>
+            <li>Geolocation access</li>
+            <ul>
+              <li>navigator.geolocation()</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <hr />
+      <li>Semantic elements</li>
+      <ul>
+        <li>
+          <h4>
+            Used for screen readers to let those who need them, know important
+            sections of a page
+          </h4>
+        </li>
+        <li><h4>Structural Semantic elements</h4></li>
+        <ul>
+          <li>header tag: Top of the document</li>
+          <li>main tag: The main content of the document</li>
+          <li>nav tag: The navigation menu</li>
+          <li>
+            section tag: Portions of the document split up, like a div but more
+            specific
+          </li>
+          <li>
+            article tag: Content parallel to the main content i.e. News article,
+            blog, image
+          </li>
+          <li>
+            aside tag: Contend aside from the main content i.e. ad's/newsfeed
+          </li>
+          <li>footer tag: Bottom of the webpage</li>
+        </ul>
+        <li><h4>Other Semantic elements</h4></li>
+        <ul>
+          <li>details tag: Additional details the user can view/hide</li>
+          <li>figcaption: caption for a figure tag</li>
+          <li>figure tag: diagrams, photos, code snippets</li>
+          <li>The mark tag: highlighted or marked text</li>
+        </ul>
+      </ul>
+      <hr />
+      <li>How to's in web development</li>
+      <ul>
+        <li><h4>If your code follows W3 standards carefully it will</h4></li>
+        <ul>
+          <li>Always run correctly in new or old browsers</li>
+          <li>Will be scalable and accessible to screen readers</li>
+        </ul>
+        <li>
+          <h4>
+            Use W3 code validators to verify that it will run on multiple
+            devices
+          </h4>
+        </li>
+        <ul>
+          <li>
+            Look for vscode extensions to check if your code is in compliance
+          </li>
+          <li>
+            Use developer tools to verify that your website renders correctly on
+            different screen sizes
+          </li>
+        </ul>
+      </ul>
+      <hr />
+      <li>The canvas element</li>
+      <ul>
+        <canvas height="400" width="400"></canvas>
+        <li>It is the graphics element for HTML</li>
+        <li>Utilizes javascript to draw</li>
+      </ul>
+      <hr />
+      <li>Navigation for mobile devices</li>
+      <ul>
+        <li>Place navigation elements in easy to find places</li>
+        <li>
+          Stick to text based hyperlinks and give more padding to the clickable
+          area
+        </li>
+        <li>Provide access to the full version of the site</li>
+        <li>
+          Limit the content so the web version isn't overwhelming (think in
+          terms of less real estate)
+        </li>
+      </ul>
+      <hr />
+      <li>Images for mobile</li>
+      <ul>
+        <li>Image should resize proportionally as the view gets smaller</li>
+        <li>
+          Image should rarely exceed the view of the width of the screen (fluid
+          images)
+        </li>
+        <a href="https://www.khronos.org/webgl/" target="_blank"
+          ><li>Consider using WebGL to create 2d and 3d graphics</li></a
+        >
+      </ul>
+      <hr />
+      <li>HTML5 API's</li>
+      <ul>
+        <li><h4>DOM: Document Object Model manipulation</h4></li>
+        <li><h4>Canvas</h4></li>
+        <ul>
+          <li>The canvas tag</li>
+          <li>
+            Uses DOM delectors to retrieve the canvas element and generate its
+            context
+          </li>
+          <li>Use the DOM element to start drawing!</li>
+        </ul>
+        <li><h4>Geolocation</h4></li>
+        <ul>
+          <li>
+            Retrieves the devices GPS location through the Navigator object
+          </li>
+          <li>
+            You can set up a listeneer to watch the position using
+            watchPosition()
+          </li>
+          <li>
+            Geolocation API
+            <b
+              >WILL NOT GET YOUR LOCATION IF YOU DO NOT GIVE THE APP PERMISSION
+              VIA YOUR BROWSER</b
+            >
+          </li>
+        </ul>
+        <li><h4>Drag and Drop API</h4></li>
+        <ul>
+          <div style="display: flex; justify-content: space-around">
+            <img
+              id="drag1"
+              src="https://images.pexels.com/photos/7214784/pexels-photo-7214784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              draggable="true"
+              ondragstart="drag(event)"
+              width="200"
+              height="300"
+            />
+            <div
+              id="div1"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              style="height: 300px; width: 200px; border: solid black"
+            ></div>
+            <div
+              id="div1"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              style="height: 300px; width: 200px; border: solid black"
+            ></div>
+          </div>
+          <li>Incredibly powerful and cool tool to utilize</li>
+          <li>
+            Can be very tedious as you handle every event that takes place
+          </li>
+        </ul>
+
+        <li><h4>File API</h4></li>
+        <ul>
+          <li>Handling and manipulating file objects in JS</li>
+          <li>
+            Creating a new instance of the File() class takes 2 or 3 parameters
+          </li>
+          <ol>
+            <li>Data provided as an array of lines of text</li>
+            <li>File name</li>
+            <li>
+              An object that can contain the file type, and lastModified date
+            </li>
+            <li>Example in JS file</li>
+          </ol>
+        </ul>
+        <li><h4>History API</h4></li>
+        <ul>
+          <li>Reading and managing the browsers url and history</li>
+        </ul>
+        <hr />
+        <li><h4>Should I do form validation?</h4></li>
+        <ul>
+          <li>Yes, you should</li>
+          <li>Input tags may take regex to validate without JS</li>
+          <ul>
+            <li>Regex is a language that provides immediate form validation</li>
+          </ul>
+          <li>
+            Using JS, you can inject warnings or error messages into the form
+          </li>
+          <li>Its good practice</li>
+        </ul>
+      </ul>
+      <hr />
+      <li>Responsive design</li>
+      <ul>
+        <li><h4>Consider using click actions</h4></li>
+        <ul>
+          <li>Like an a tag that triggers a phone call or text</li>
+        </ul>
+        <li>
+          <h4>Use Flexbox or grid to guide the view on different sizes</h4>
+        </li>
+        <li><h4>Set a "max-width: 100%" for images</h4></li>
+        <li>
+          <h4>use "@media" queries to separate styles for different views</h4>
+        </li>
+        <li><h4>Utilize responsive design frameworks</h4></li>
+        <ul>
+          <li>Ex: bootstrap, material-ui, etc.</li>
+        </ul>
+        <!-- In the video at 1:06:48 / 1:27:39 -->
+        <li id="transition"><h4>CSS Transitions</h4></li>
+        <li id="animation"><h4>CSS Animations</h4></li>
+      </ul>
+      <li>Copyright ethics and legal</li>
+      <ul>
+        <li>
+          <h4>
+            Copyright is granted to you the minute you set your idea in a fixed
+            form
+          </h4>
+        </li>
+        <li>To sue you must register your copywright beforehand</li>
+        <li>Lasts for at least 70 years after the creation is complete</li>
+      </ul>
+      <li>Nettiquette</li>
+      <ul>
+        <li>Respectful language</li>
+        <li>Choose internet friends carefully</li>
+        <li>Don't invade the privacy of others</li>
+        <li>Verify facts before posting/reposting</li>
+        <li>reply to communications in a timely matter</li>
+        <li>Keep your net presence up to date</li>
+      </ul>
+      <li>Culture</li>
+      <ul>
+        <li>Establish your own beliefs and values</li>
+        <li>Research and understand different cultures</li>
+        <li>Travel helps with understanding of culture</li>
+        <li>Keep an open mind</li>
+        <li>Let go of stereotypes</li>
+        <li>Recognize that everyone is unique</li>
+      </ul>
+      <li>GDPR (General Data Protection Regulation)</li>
+      <ul>
+        <li>
+          All websites that attract EU citizens must publish and follow a
+          transparent privacy policy
+        </li>
+        <li>If companies fail to do so, they will face penalties</li>
+        <li>Fines up to 10,000,000 EUR or 20,000,000 Euros</li>
+      </ul>
+      <li>COPPA (Childrens Online Privacy Protection Act</li>
+      <ul>
+        <li>Protects US children under the age of 13</li>
+        <li>
+          Require permission from parents for collection and use of personal
+          information of minors
+        </li>
+        <li>$40,000 per penalty (for each piece of data...for each person)</li>
+      </ul>
+    </ol>
+
+    <script src="index.js"></script>
+  </body>
+</html>

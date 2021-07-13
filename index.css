@@ -1,0 +1,112 @@
+/* CSS notes */
+
+body {
+    background-color: #979B8D;
+    font-family: 'Karla', sans-serif;
+   
+}
+
+audio {
+    width: 40vw;
+}
+
+video {
+    width: 40vw;
+}
+
+/* Combinators */
+
+/* Grouping selection */
+h4, h1 {
+    font-size: 200%;
+    background-color: black;
+    color: white;
+    padding: 1%
+}
+
+/* Descendent selector: */
+ul li {
+    background-color: lavender;
+    width: 90%;
+    padding: 1%
+}
+
+
+/* Child */
+ol > li {
+    color: #403233;
+    width: 80%;
+}
+
+li + ul {
+  width: 95%;
+  background-color: #5C7457;
+  padding: 3%;
+  font-size: 105%;
+}
+
+
+/* Pseudo classes and elements */
+
+/* Pseudo classes allow the selection of elements based on state information */
+
+h4:hover {
+    background-color: #696D7D;
+}
+
+a:active {
+    color: #FF729F
+}
+
+
+/* CSS Transitions */
+
+#transition {
+   width: 50%;
+   border: 1px solid black;
+   transition-property: width;
+   transition-timing-function: ease;
+   transition-duration: 1s;
+   transition-delay: 1ms;
+}
+
+#transition:hover {
+    width: 90%;
+}
+
+
+#animation {
+    width: 90%;
+    font-weight: bold;
+    font-size: 1.2em;
+    animation-name: colorchange;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: red;
+    }
+    15% {
+        background-color: orange;
+    }
+    33% {
+        background-color: yellow;
+    }
+    48% {
+        background-color: green;
+    }
+    66% {
+        background-color: blue;
+    }
+    81% {
+        background-color: indigo;
+    }
+
+    100% { 
+        background-color: violet;
+    }
+}
