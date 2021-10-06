@@ -18,30 +18,34 @@ video {
 
 /* Grouping selection */
 h4, h1 {
-    font-size: 200%;
+    font-size: 120%;
     background-color: black;
     color: white;
-    padding: 1%
+    padding: .1%;
+    width: 60%;
+    text-align: center;
+    margin-left: 10%;
+    min-width: 80%;
 }
 
 /* Descendent selector: */
 ul li {
     background-color: lavender;
-    width: 90%;
-    padding: 1%
+    width: 60vw;
+    padding: .1%;
 }
 
 
 /* Child */
 ol > li {
     color: #403233;
-    width: 80%;
+    width: 40%;
 }
 
 li + ul {
-  width: 95%;
+  width: 80%;
   background-color: #5C7457;
-  padding: 3%;
+  padding: .5%;
   font-size: 105%;
 }
 
